@@ -4,7 +4,7 @@ const idade = Number(prompt.question("Qual a sua idade ? "));
 
 const ehMaiorDeIdade = idade >= 18;
 
-// Estrutura condicionais: if/else
+// Estruturas condicionais: if/else
 if (idade >= 18) {
   console.log("Eh maior de idade!!!");
 } else {
