@@ -112,5 +112,29 @@ console.log(indexDoElemento200);
 const indexDoElemento40 = numeros.lastIndexOf(200);
 
 console.log(indexDoElemento40);
+console.clear();
 
-//! Tempo da aula 52:46
+// * Percorrendo arrays com o for
+
+const arr = [45, 36, 90, 5, 2, 55];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(i, arr[i]);
+}
+
+console.clear();
+
+// * for-of
+
+for (const elemento of arr) {
+  console.log(elemento);
+}
+
+// * for-in
+
+console.clear();
+
+for (const indice in arr) {
+  console.log(indice, typeof indice);
+  console.log(arr["0"]);
+}
