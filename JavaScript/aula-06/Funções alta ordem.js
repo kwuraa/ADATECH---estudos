@@ -41,5 +41,3 @@ const resultado = calcular(
 );
 
 console.log(resultado);
-
-// ! tempo da aula 30:13
