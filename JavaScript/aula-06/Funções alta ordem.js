@@ -2,7 +2,7 @@
 
 //* 1. Função que recebe outra função como parâmetro
 
-function welcome(courseName, studentName) {
+function welcome(courseName) {
   return (studentName) => {
     console.log(
       `Olá, ${studentName}! Seja bem-vinda(o) ao curso de ${courseName}!`
