@@ -15,26 +15,11 @@ console.clear;
 //            em seguida, imprima os dados deles na tela.
 
 const alunos = [
-  {
-    nome: "Quincy",
-    media: 96,
-  },
-  {
-    nome: "Jason",
-    media: 84,
-  },
-  {
-    nome: "Alexis",
-    media: 100,
-  },
-  {
-    nome: "San",
-    media: 65,
-  },
-  {
-    nome: "Katie",
-    media: 90,
-  },
+  { nome: "Quincy", media: 96 },
+  { nome: "Jason", media: 84 },
+  { nome: "Alexis", media: 100 },
+  { nome: "San", media: 65 },
+  { nome: "Katie", media: 90 },
 ];
 
 const alunosComMediaAlta = alunos.filter((aluno) => aluno.media >= 85);
