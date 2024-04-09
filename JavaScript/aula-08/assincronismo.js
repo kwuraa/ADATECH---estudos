@@ -32,16 +32,13 @@ const { promises } = require("stream");
 
 function lerArquivoPromise() {
   return new Promise((resolve, reject) => {
-    fs.readFile(
-      "JavaScript/aula-08/arquivo.txt",
-      (erro, consteudoDoArquivo) => {
-        if (erro) {
-          reject("Ocorreu um erro ao tentar ler o arquivo! ", erro);
-        } else {
-          resolve(String(consteudoDoArquivo));
-        }
+    fs.readFile("JavaScript/aula-08/arquivo.txt", (erro, conteudoDoArquivo) => {
+      if (erro) {
+        reject("Ocorreu um erro ao tentar ler o arquivo! ", erro);
+      } else {
+        resolve(String(conteudoDoArquivo));
       }
-    );
+    });
   });
 }
 
