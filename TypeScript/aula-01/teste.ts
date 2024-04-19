@@ -61,11 +61,10 @@ pessoa.profissao = "desenvolvedor";
 
 console.log(pessoa);
 
-function chooseNumber(
-  num1: number,
-  num2: number,
-  criterio?: "greater" | "lower"
-) {
+// Type aliases
+type Criterio = "greater" | "lower";
+
+function chooseNumber(num1: number, num2: number, criterio?: Criterio): number {
   switch (criterio) {
     case "greater":
       return num1 > num2 ? num1 : num2;
@@ -82,3 +81,49 @@ function chooseNumber(
 const numeroEscolhido = chooseNumber(10, 20, "greater");
 
 console.log("numeroEscolhido:", numeroEscolhido);
+
+function somar(num1: number, num2: number): number {
+  return num1 + num2;
+}
+
+// * Utility Types: A ideia deles é permitir que vc crie novos tipos a partir de tipos já existentes.
+
+// 1. Partial
+
+type PersonPartial = Partial<Person>;
+
+const outraPessoa: PersonPartial = {};
+
+// 2. Required
+
+type PersonRequired = Required<Person>;
+
+// 3. Pick
+
+type PersonPicked = Pick<Person, "nome" | "idade">;
+
+// 4. Omit
+
+type PersonOmit = Omit<Person, "profissao">;
+
+// 5. Exclude
+
+type CriterioExclude = Exclude<Criterio, "greater">;
+
+// 6. Record
+
+type Pessoas = Record<string, Person>;
+
+const pessoas: Pessoas = {
+  // Qualquer String
+  "123.456.789-00": {
+    nome: "Matheus",
+    idade: 20,
+    altura: 1.55,
+  },
+  "123.456.789.01": {
+    nome: "Camila",
+    idade: 21,
+    altura: 1.6,
+  },
+};

@@ -42,3 +42,20 @@ function chooseNumber(num1, num2, criterio) {
 }
 const numeroEscolhido = chooseNumber(10, 20, "greater");
 console.log("numeroEscolhido:", numeroEscolhido);
+function somar(num1, num2) {
+    return num1 + num2;
+}
+const outraPessoa = {};
+const pessoas = {
+    // Qualquer String
+    "123.456.789-00": {
+        nome: "Matheus",
+        idade: 20,
+        altura: 1.55,
+    },
+    "123.456.789.01": {
+        nome: "Camila",
+        idade: 21,
+        altura: 1.6,
+    },
+};
