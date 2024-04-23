@@ -12,3 +12,7 @@ body {
 h1 {
   margin: 2rem 1rem;
 }
+
+ul#list {
+  padding: 0 2rem;
+}
