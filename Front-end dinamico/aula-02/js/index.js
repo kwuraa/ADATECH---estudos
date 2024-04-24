@@ -43,11 +43,9 @@ console.log(btnDiminuir.classList);
 
 const themeBtn = document.querySelector("#theme");
 
-let darkTheme = false;
+let darkTheme;
 
-themeBtn.addEventListener("click", () => {
-  darkTheme = !darkTheme;
-
+function switchTheme() {
   const body = document.querySelector("body");
 
   if (darkTheme) {
@@ -57,4 +55,21 @@ themeBtn.addEventListener("click", () => {
     body.style.backgroundColor = "white";
     body.style.color = "black";
   }
+}
+
+// Definindo uma função que sera executada ao carregar o conteudo da window (página)
+window.onload = () => {
+  const isDarkThemeStorage = localStorage.getItem("isDarkTheme");
+
+  darkTheme = isDarkThemeStorage === "true";
+
+  switchTheme();
+};
+
+themeBtn.addEventListener("click", () => {
+  darkTheme = !darkTheme;
+
+  localStorage.setItem("isDarkTheme", darkTheme);
+
+  switchTheme();
 });
