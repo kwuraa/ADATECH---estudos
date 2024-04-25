@@ -7,7 +7,9 @@ let tasks = []; // [{title: Tarefa 1, done: true}...]
 
 function renderTaskOnHTML(taskTitle, done = false) {
   const li = document.createElement("li");
+  li.setAttribute("class", "task-list"); // !
   const checked = document.createElement("input"); // <input />
+  checked.setAttribute("class", "checkbox-list"); // !
   checked.setAttribute("type", "checkbox"); // <input type:checkbox />
   checked.addEventListener("change", (event) => {
     const liToToggle = event.target.parentElement;
@@ -37,6 +39,7 @@ function renderTaskOnHTML(taskTitle, done = false) {
   checked.checked = done;
 
   const span = document.createElement("span");
+  span.setAttribute("class", "task-title");
   span.textContent = taskTitle;
 
   if (done) {
@@ -44,7 +47,8 @@ function renderTaskOnHTML(taskTitle, done = false) {
   }
 
   const removeBtn = document.createElement("button");
-  removeBtn.textContent = "🗑️";
+  removeBtn.setAttribute("class", "remove-btn material-symbols-outlined");
+  removeBtn.textContent = "delete";
   removeBtn.addEventListener("click", (event) => {
     const liToRemove = event.target.parentElement;
 
@@ -83,6 +87,12 @@ form.addEventListener("submit", (event) => {
 
   if (taskTitle.length < 3) {
     alert("Sua tarefa precisa ter, pelo menos, 3 caracteres.");
+    inputCleaner();
+    return;
+  } else if (taskTitle.length > 40) {
+    alert("Sua tarefa é muito longa.");
+    taskTitleInput.value;
+    inputCleaner();
     return;
   }
 
@@ -96,5 +106,9 @@ form.addEventListener("submit", (event) => {
   // Add a nova tarefa ao HTML
   renderTaskOnHTML(taskTitle);
 
-  taskTitleInput.value = "";
+  inputCleaner();
+
+  function inputCleaner() {
+    taskTitleInput.value = "";
+  }
 });
