@@ -17,12 +17,18 @@ body {
   height: 100vh;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
 .container {
   background-color: #f7f7f7;
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   position: relative;
-  overflow: hidden;
+  overflow: auto;
+  max-height: 870px;
   width: 500px;
   max-width: 100%;
   min-height: 500px;
