@@ -26,6 +26,7 @@ body {
   width: 500px;
   max-width: 100%;
   min-height: 500px;
+  padding-bottom: 20px;
 }
 
 main #title {
@@ -73,7 +74,7 @@ li {
 
 li .checkbox-list {
   position: absolute;
-  right: 10%;
+  right: 12%;
 }
 
 .remove-btn {
@@ -84,7 +85,7 @@ li .checkbox-list {
   cursor: pointer;
 
   position: absolute;
-  right: 5%;
+  right: 6.7%;
 }
 
 main .add-btn {
