@@ -1,5 +1,97 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap%27);
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #663dff;
+  background: linear-gradient(to right, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  background-color: #f7f7f7;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  max-width: 100%;
+  min-height: 500px;
+}
+
+main #title {
+  text-align: center;
+  margin: 20px;
+  justify-content: center;
+  cursor: default;
+}
+
+main .task-form {
+  display: flex;
+  justify-content: center;
+}
+
+.container input.input-tasks {
+  background-color: #eee;
+  border: none;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 8px 10px;
+  font-size: 13px;
+  width: 75%;
+  outline: none;
+}
+
+li.task-list {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  margin-left: 10%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+  width: 400px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+}
+
+li .checkbox-list {
+  position: absolute;
+  right: 10%;
+}
+
+.remove-btn {
+  border: none;
+  background-color: #f7f7f7;
+  font-size: 18px;
+
+  cursor: pointer;
+
+  position: absolute;
+  right: 5%;
+}
+
+main .add-btn {
+  background-color: #f7f7f7;
+  border: none;
+
+  margin-left: 10px;
+
+  cursor: pointer;
 }

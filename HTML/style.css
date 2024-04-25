@@ -1,61 +1,59 @@
 /* CSS: Cascading Style Sheets */
 
-
 .title {
-    font-size: 50px;
-    font-weight: 400;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 section#principais-estilos {
-    background-color: black;
-    color: white;
-    padding: 50px;
-    margin: 20px 40px;
-    border: 2px solid red;
-    border-radius: 20px;
+  background-color: black;
+  color: white;
+  padding: 50px;
+  margin: 20px 40px;
+  border: 2px solid red;
+  border-radius: 20px;
 }
 
 #principais-estilos .paragrafo {
-    font-size: 22px;
-    line-height: 1.2;
-    color: red;
-    font-family: monospace;
+  font-size: 22px;
+  line-height: 1.2;
+  color: red;
+  font-family: monospace;
 }
 
 #flexbox .container {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
 
-    justify-content: space-evenly; /* Alinhamento Horizontal */
-    align-items: center;         /* Alinhamento Vertical   */
-    }
+  justify-content: space-evenly; /* Alinhamento Horizontal */
+  align-items: center; /* Alinhamento Vertical   */
+}
 
 #flexbox .container .box {
-    width: 200px;
-    height: 200px;
-    background-color: green;
+  width: 200px;
+  height: 200px;
+  background-color: green;
 }
 
 #flexbox .container .box2 {
-    width: 200px;
-    height: 400px;
-    background-color: blue;
+  width: 200px;
+  height: 400px;
+  background-color: blue;
 }
 
 section#grid-layout {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
-
 #grid-layout .container-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 #grid-layout .container-grid .caixa {
-    width: 200px;
-    height: 200px;
-    background-color: aquamarine;
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
 }
