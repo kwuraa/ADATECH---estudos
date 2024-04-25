@@ -3,7 +3,7 @@ const taskTitleInput = document.querySelector("#task-title-form");
 const button = document.querySelector("#add-task-btn");
 const taskList = document.querySelector("#todo-list");
 
-let tasks = []; // [{title: Tarefa 1, done: true}]
+let tasks = []; // [{title: Tarefa 1, done: true}...]
 
 function renderTaskOnHTML(taskTitle, done = false) {
   const li = document.createElement("li");
