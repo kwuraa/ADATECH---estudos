@@ -28,7 +28,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   position: relative;
   overflow: scroll;
-  max-height: 870px;
+  max-height: 500px;
   width: 500px;
   max-width: 100%;
   min-height: 500px;
